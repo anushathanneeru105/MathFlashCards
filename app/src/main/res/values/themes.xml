@@ -1,0 +1,38 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MathFlashCards" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimaryDark">#26A69A</item>
+        <item name="colorPrimary">#FF7043</item>
+    </style>
+
+    <style name="additionTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimaryDark">#FF7043</item>
+        <item name="colorPrimary">#FF8A65</item>
+    </style>
+
+    <style name="subtractionTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimaryDark">#7E57C2</item>
+        <item name="colorPrimary">#9575CD</item>
+    </style>
+
+    <style name="multiplicationTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimaryDark">#EC407A</item>
+        <item name="colorPrimary">#F06292</item>
+    </style>
+
+    <style name="divisionTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimaryDark">#558d4f</item>
+        <item name="colorPrimary">#77a472</item>
+    </style>
+    <style name="Theme.MathFlashCards" parent="Base.Theme.MathFlashCards" />
+</resources>

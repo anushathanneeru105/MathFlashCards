@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="?attr/colorPrimary">
+
+    <!-- Home Button -->
+    <ImageButton
+        android:id="@+id/button_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:onClick="onHomeClicked"
+        android:text="@string/home"
+        android:src="@drawable/ic_home"
+        android:layout_marginStart="15dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/when_clicked_on_it_navigate_to_main_activity" />
+
+    <ImageButton
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:layout_marginEnd="15dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/baseline_arrow_forward_24"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/when_clicked_on_it_generate_new_flash_card"
+        tools:ignore="RelativeOverlap" />
+
+    <!-- Operator 1 TextView -->
+    <TextView
+        android:id="@+id/text_view_operator1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/operator_1"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/button_home"
+        android:paddingEnd="50dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="100sp"
+        tools:ignore="RtlSymmetry" />
+
+<LinearLayout
+    android:id="@+id/ll_operator2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@id/text_view_operator1">
+    <!-- Operand TextView -->
+    <TextView
+        android:id="@+id/text_view_operand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/operand"
+        android:paddingEnd="50dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="100sp"
+        tools:ignore="RtlSymmetry" />
+
+    <!-- Operator 2 TextView -->
+    <TextView
+        android:id="@+id/text_view_operator2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/operator_2"
+        android:paddingEnd="50dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="100sp"
+        tools:ignore="RtlSymmetry" />
+</LinearLayout>
+    <!-- Line separator -->
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/ll_operator2"
+        android:background="@drawable/line_view"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Answer EditText -->
+    <EditText
+        android:id="@+id/edit_text_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_line"
+        android:background="@android:color/transparent"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="100sp"
+        android:gravity="right"
+        android:paddingEnd="50dp"
+        tools:ignore="LabelFor,RtlHardcoded,RtlSymmetry"
+        android:autofillHints="" />
+
+        <Button
+            android:id="@+id/btn_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/show_answer"
+            app:backgroundTint="?attr/colorPrimaryDark"
+            android:layout_below="@id/edit_text_answer"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/btn_check">
+
+        <Button android:id="@+id/btn_option1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:background="@drawable/circle"
+        app:backgroundTint="?attr/colorPrimaryDark"/>
+
+        <Button android:id="@+id/btn_option2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:background="@drawable/circle"
+            app:backgroundTint="?attr/colorPrimaryDark"/>
+
+        <Button android:id="@+id/btn_option3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:background="@drawable/circle"
+            app:backgroundTint="?attr/colorPrimaryDark"/>
+
+    </LinearLayout>
+    <!-- Include custom number keyboard
+    <com.example.mathflashcards.CustomNumberKeyboard
+        android:id="@+id/numberKeyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        />-->
+</RelativeLayout>
+
+    <!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->

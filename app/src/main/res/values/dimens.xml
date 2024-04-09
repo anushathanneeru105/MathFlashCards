@@ -1,0 +1,11 @@
+<!-- Example: dimensions.xml -->
+<resources>
+    <dimen name="line_width_percentage">25%</dimen> <!-- Adjust the percentage as needed -->
+
+    <dimen name="padding_default">30dp</dimen>
+    <dimen name="margin_title_top">50dp</dimen>
+    <dimen name="margin_title_bottom">20dp</dimen>
+    <dimen name="margin_default">15dp</dimen>
+
+
+</resources>

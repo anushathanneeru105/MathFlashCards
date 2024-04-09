@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_default"
+    android:background="?attr/colorPrimary">
+
+    <LinearLayout
+        android:id="@+id/ll_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true">
+    <!-- Home Button -->
+    <ImageButton
+        android:id="@+id/button_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onHomeClicked"
+        android:text="@string/home"
+        android:src="@drawable/ic_home"
+        android:layout_marginStart="@dimen/margin_default"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/when_clicked_on_it_navigate_to_main_activity" />
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/timer"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="30sp"
+        style="@style/RobotoTextViewStyle"
+        android:contentDescription="@string/when_clicked_on_it_generate_new_flash_card"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/tv_card_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/card_count"
+        android:textSize="30sp"
+        style="@style/RobotoTextViewStyle"
+        android:layout_marginStart="@dimen/margin_default"
+        android:contentDescription="@string/when_clicked_on_it_generate_new_flash_card"
+        tools:ignore="RelativeOverlap" />
+    </LinearLayout>
+    <!-- Operator 1 TextView -->
+    <TextView
+        android:id="@+id/text_view_operator1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/operator_1"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/ll_top_bar"
+        android:layout_marginEnd="30dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="150sp"
+        style="@style/RobotoTextViewStyle"
+        tools:ignore="RtlSymmetry" />
+
+<LinearLayout
+    android:id="@+id/ll_operator2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@id/text_view_operator1">
+    <!-- Operand TextView -->
+    <TextView
+        android:id="@+id/text_view_operand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/operand"
+        android:layout_marginEnd="30dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="150sp"
+        style="@style/RobotoTextViewStyle"
+        tools:ignore="RtlSymmetry" />
+
+    <!-- Operator 2 TextView -->
+    <TextView
+        android:id="@+id/text_view_operator2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/operator_2"
+        android:layout_marginEnd="30dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="150sp"
+        style="@style/RobotoTextViewStyle"
+        tools:ignore="RtlSymmetry" />
+</LinearLayout>
+    <!-- Line separator -->
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/ll_operator2"
+        android:background="@drawable/line_view"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Options -->
+    <LinearLayout
+        android:id="@+id/ll_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/view_line"
+        android:layout_marginTop="50dp">
+
+        <Button android:id="@+id/btn_option1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            style="@style/RobotoTextViewStyle"
+            android:background="@drawable/circle"/>
+
+        <Button android:id="@+id/btn_option2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            style="@style/RobotoTextViewStyle"
+            android:background="@drawable/circle"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_correct_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/view_line"
+        android:layout_marginEnd="30dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="150sp"
+        style="@style/RobotoTextViewStyle"
+        tools:ignore="RtlSymmetry"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>
